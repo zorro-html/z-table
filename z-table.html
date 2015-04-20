@@ -1,0 +1,91 @@
+<!--
+  # table
+
+  表格
+
+  支持的样式特性有：`[bordered]`、`[striped]`、`[hover]`
+
+  注：需要在最外层 (如 `<html>` 标签中) 加入一个特性 `z`，即：`<html z>`
+
+  ## Examples
+
+  ```
+  <table bordered striped hover>
+    <thead>
+      <tr><th>h1</th><th>h2</th><th>h3</th><th>h4</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>a1</td><td>a2</td><td>a3</td><td>a4</td></tr>
+      <tr><td>b1</td><td>b2</td><td>b3</td><td>b4</td></tr>
+      <tr><td>c1</td><td>c2</td><td>c3</td><td>c4</td></tr>
+      <tr><td>d1</td><td>d2</td><td>d3</td><td>d4</td></tr>
+    </tbody>
+  </table>
+  ```
+-->
+
+<style>
+[z] /deep/ table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  max-width: 100%;
+  width: 100%;
+  background-color: white;
+  margin-bottom: 20px;
+}
+[z] /deep/ th, td {
+  text-align: left;
+  padding: 15px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: 1px solid #dddddd;
+}
+[z] /deep/ thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dddddd;
+}
+[z] /deep/ thead > tr:first-child > th,
+[z] /deep/ thead > tr:first-child > td {
+  border-top: 0;
+}
+[z] /deep/ tbody + tbody {
+  border-top: 2px solid #dddddd;
+}
+
+[z] /deep/ table[bordered] {
+  border: 1px solid #dddddd;
+}
+[z] /deep/ table[bordered] th,
+[z] /deep/ table[bordered] td {
+  border: 1px solid #dddddd;
+}
+[z] /deep/ table[bordered] thead th,
+[z] /deep/ table[bordered] thead td {
+  border-bottom-width: 2px;
+}
+[z] /deep/ table[striped] tr:nth-child(odd) td,
+[z] /deep/ table[striped] tr:nth-child(odd) th {
+  background-color: #f9f9f9;
+}
+[z] /deep/ table[hover] tr:hover td,
+[z] /deep/ table[hover] tr:hover th {
+  background-color: #f5f5f5;
+}
+[z] /deep/ tr > .active,
+[z] /deep/ .active > td,
+[z] /deep/ .active > th {
+  background-color: #f5f5f5;
+}
+[z] /deep/ table[hover] tbody tr > .active:hover,
+[z] /deep/ table[hover] tbody .active:hover > td,
+[z] /deep/ table[hover] tbody .active:hover > th {
+  background-color: #e8e8e8;
+}
+[z] /deep/ thead > tr {
+  background-color: #eeeeee;
+}
+[z] /deep/ table[bordered] thead th,
+[z] /deep/ table[bordered] thead td {
+  border-bottom-width: 1px;
+}
+</style>
