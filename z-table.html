@@ -51,6 +51,7 @@ Just add `[z]` attribute to any parent element of the target table like `<html z
 -->
 
 <style shim-shadowdom>
+html /deep/ [z] table,
 [z] /deep/ table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -59,58 +60,83 @@ Just add `[z]` attribute to any parent element of the target table like `<html z
   background-color: white;
   margin-bottom: 20px;
 }
-[z] /deep/ th, td {
+html /deep/ [z] th,
+[z] /deep/ th,
+html /deep/ [z] td,
+[z] /deep/ td {
   text-align: left;
   padding: 15px;
   line-height: 1.42857143;
   vertical-align: top;
   border-top: 1px solid #dddddd;
 }
+html /deep/ [z] thead th,
 [z] /deep/ thead th {
   vertical-align: bottom;
   border-bottom: 2px solid #dddddd;
 }
+html /deep/ [z] thead > tr:first-child > th,
 [z] /deep/ thead > tr:first-child > th,
+html /deep/ [z] thead > tr:first-child > td,
 [z] /deep/ thead > tr:first-child > td {
   border-top: 0;
 }
+html /deep/ [z] tbody + tbody,
 [z] /deep/ tbody + tbody {
   border-top: 2px solid #dddddd;
 }
 
+html /deep/ [z] table[bordered],
 [z] /deep/ table[bordered] {
   border: 1px solid #dddddd;
 }
+html /deep/ [z] table[bordered] th,
 [z] /deep/ table[bordered] th,
+html /deep/ [z] table[bordered] td,
 [z] /deep/ table[bordered] td {
   border: 1px solid #dddddd;
 }
+html /deep/ [z] table[bordered] thead th,
 [z] /deep/ table[bordered] thead th,
+html /deep/ [z] table[bordered] thead td,
 [z] /deep/ table[bordered] thead td {
   border-bottom-width: 2px;
 }
+html /deep/ [z] table[striped] tr:nth-child(odd) td,
 [z] /deep/ table[striped] tr:nth-child(odd) td,
+html /deep/ [z] table[striped] tr:nth-child(odd) th,
 [z] /deep/ table[striped] tr:nth-child(odd) th {
   background-color: #f9f9f9;
 }
+html /deep/ [z] table[hover] tr:hover td,
 [z] /deep/ table[hover] tr:hover td,
+html /deep/ [z] table[hover] tr:hover th,
 [z] /deep/ table[hover] tr:hover th {
   background-color: #f5f5f5;
 }
+html /deep/ [z] tr > .active,
 [z] /deep/ tr > .active,
+html /deep/ [z] .active > td,
 [z] /deep/ .active > td,
+html /deep/ [z] .active > th,
 [z] /deep/ .active > th {
   background-color: #f5f5f5;
 }
+html /deep/ [z] table[hover] tbody tr > .active:hover,
 [z] /deep/ table[hover] tbody tr > .active:hover,
+html /deep/ [z] table[hover] tbody .active:hover > td,
 [z] /deep/ table[hover] tbody .active:hover > td,
+html /deep/ [z] table[hover] tbody .active:hover > th,
 [z] /deep/ table[hover] tbody .active:hover > th {
   background-color: #e8e8e8;
 }
+html /deep/ [z] thead > tr,
 [z] /deep/ thead > tr {
   background-color: #eeeeee;
 }
+html /deep/ [z] table[bordered] thead th,
 [z] /deep/ table[bordered] thead th,
+html /deep/ [z] table[bordered] thead td,
 [z] /deep/ table[bordered] thead td {
   border-bottom-width: 1px;
 }
