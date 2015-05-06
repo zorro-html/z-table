@@ -1,10 +1,10 @@
-# `<z-table>`
+# Table
 
 Styled table element
 
 ## Usage
 
-Just add `[z]` attribute to any parent element of the target table like `<html z>`
+Just add `[z]` attribute to any parent element of the target table like `<body z>`
 
 ## Attributes
 
