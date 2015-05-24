@@ -2,6 +2,12 @@
 
 Styled table element
 
+## Import
+
+```
+<link rel="import" href="z-table/z-table.html">
+```
+
 ## Usage
 
 Just add `[z]` attribute to any parent element of the target table like `<body z>`
